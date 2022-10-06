@@ -20,6 +20,11 @@ h1, h2, h3, p{
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+/*Appearance of different tag h4: */
+h4{
+    color:rgb(17, 17, 17);
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
     
 .myWeek1{
     margin: auto;
