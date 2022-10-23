@@ -32,7 +32,7 @@
         <p>The first chart tracks UK inflation using CPI.</p>
         <div class="chart" id="Chart1"></div>
 
-        <h4>UK Debt</h3>
+        <h4>UK Debt</h4>
         <p>The second chart tracks UK debt as a percentage of GDP</p>
         <div class="chart" id="Chart2"> </div>
         
@@ -42,6 +42,12 @@
         <h4>IMF Lending</h4>
         <p>This Chart tracks IMF lending, however lacks any adjustment to compare the data over time.</p>
         <div class="chart" id="Chart3"> </div>
+
+        <h4>Adjusted IMF Lending</h4>
+        <p>This Chart reflects the need for lending to be comparable across the time series.
+        Whilst lending increases so does World GDP and so the ability to loan more sustainably has increased. Therefore we can see that IMF lending has in fact shrunk contrary to what the initial chart suggests.</p>
+        <div class="chart" id="Chart4"> </div>
+
     </div> 
 </body>
 
@@ -51,11 +57,13 @@
     var myChart1 = "chartINF1.json";
     var myChart2 = "chartPSF1.json";
     var mychart3 = "imflending.json";
+    var mychart4 = "AdjustedIMFLending.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#Chart3', mychart3)
+    vegaEmbed('#Chart3', mychart3);
+    vegaEmbed('#Chart4', mychart4)
 </script>
 
 </html>
