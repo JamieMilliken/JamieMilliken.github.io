@@ -27,7 +27,7 @@
     <div class="myWeek1">
         <h1>Data Science for Economists</h1>
         <h2>Jamie's Portfolio</h2>
-        <h3>Homework 1</h3>
+        <h3>Week 1</h3>
         <h4>UK Inflation</h4>
         <p>The first chart tracks UK inflation using CPI.</p>
         <div class="chart" id="Chart1"></div>
@@ -49,6 +49,13 @@
         <div class="chart" id="Chart4"> </div>
 
     </div> 
+    <div class="myWeek3">
+        <h3>Week 3</h3>
+        <h4>Historic Japanese 10 Year Bond Yields(%) </h4>
+        <p>This Chart tracks Japanese 10 Year Bond Yields (monthly) starting 1972. Japan is currently experiencing a dysfunctional bond market with the 10 year failing to trade on multiple occasions.</p>
+        <div class="chart" id="Chart5"> </div>
+
+    </div> 
 </body>
 
 
@@ -57,13 +64,15 @@
     var myChart1 = "chartINF1.json";
     var myChart2 = "chartPSF1.json";
     var mychart3 = "imflending.json";
-    var mychart4 = "AdjustedIMFLending.json"
+    var mychart4 = "AdjustedIMFLending.json";
+    var mychart5 = "Japan10yr.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', mychart3);
-    vegaEmbed('#Chart4', mychart4)
+    vegaEmbed('#Chart4', mychart4);
+    vegaEmbed('#Chart5', mychart5)
 </script>
 
 </html>
