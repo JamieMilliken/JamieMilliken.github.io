@@ -1,44 +1,80 @@
-/* Jamie, Data Science for Economists */
+ body {
+    margin: 0;
+    background:  rgb(26, 131, 245);
+    font-family: 'Arial';
+    font-weight: 500;
+ }
 
-/* This is my first proper css file */
+ .container {
+    width:80%;
+    margin: 0 auto;
+ }
+
+ header {
+    background: #fafbfc;
+ }
+
+ header::after {
+   content:'';
+   display: table;
+   clear: both
+ }
+
+ .logo {
+   float: left;
+   padding: 10px 0;
+ }
+
+ nav {
+   float: right;
+ }
+
+ nav ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+
+  nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    position: relative;
+  }
+
+  nav a {
+    color: rgba(66, 63, 63, 0.906);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+  } 
+
+  nav a:hover {
+    color: rgb(5, 5, 5);
+  }
+
+  nav a::before {
+    content: '';
+     display: block;
+     height: 5px;
+     background-color: rgb(5, 5, 5);
+
+     position: absolute;
+     top: 0;
+     width: 0%;
+
+     transition: all ease-in-out 250ms;
+
+  }
+
+  nav a:hover::before {
+    width: 100%;
+
+  }
+
+  
 
 
-/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
-/* Set the background color for my page: */
-body{
-    background-color: rgb(233, 233, 233);
  
-}
-
-
-/* Choose the appearance of the tags, h1, h3 and p: */
-h1, h2, h4, h6 p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-/*Appearance of different tag h3: */
-h3, h5{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-}  
-.myWeek1{
-    margin: auto;
-    max-width: 700px;
-    background-color: bisque;
-}
-.myWeek2{
-        margin: auto;
-        max-width: 700px;
-        background-color: rgb(196, 237, 255);
-}
-.myWeek3{
-    margin: auto;
-    max-width: 700px;
-    background-color: rgb(255, 196, 196);
-}
-    
