@@ -20,59 +20,24 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
 
+<header>
+  <div class="container">
+  <img src="assets/logo.png" alt="logo" class="logo">
+
+  <nav>
+      <ul>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='portfolio.html'>Portfolio</a></li>
+          <li><a href='#'>Project</a></li>
+          <li><a href='#'>Github</a></li>
+      </ul>
+  </nav>
+</div>
+
+</header>
 
 
-<body>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>Data Science for Economists</h1>
-        <h2>Jamie's Portfolio</h2>
-        <h3>Week 1</h3>
-        <h4>UK Inflation</h4>
-        <p>The first chart tracks UK inflation using CPI.</p>
-        <div class="chart" id="Chart1"></div>
-
-        <h4>UK Debt</h4>
-        <p>The second chart tracks UK debt as a percentage of GDP</p>
-        <div class="chart" id="Chart2"> </div>
-        
-    </div> 
-    <div class="myWeek2">
-        <h3>Week 2</h3>
-        <h4>IMF Lending</h4>
-        <p>This Chart tracks IMF lending, however lacks any adjustment to compare the data over time.</p>
-        <div class="chart" id="Chart3"> </div>
-
-        <h4>Adjusted IMF Lending</h4>
-        <p>This Chart reflects the need for lending to be comparable across the time series.
-        Whilst lending increases so does World GDP and so the ability to loan more sustainably has increased. Therefore we can see that IMF lending has in fact shrunk contrary to what the initial chart suggests.</p>
-        <div class="chart" id="Chart4"> </div>
-
-    </div> 
-    <div class="myWeek3">
-        <h3>Week 3</h3>
-        <h4>Indebtedness of the five largest western economies</h4>
-        <p>30 words why i choose this chart......more to do</p>
-        <div class="chart" id="Chart5"> </div>
-
-    </div> 
-</body>
-
-
-<script>
-    //Define charts:
-    var myChart1 = "chartINF1.json";
-    var myChart2 = "chartPSF1.json";
-    var mychart3 = "imflending.json";
-    var mychart4 = "AdjustedIMFLending.json";
-    var mychart5 = "DebtComparisonWK3.json"
-
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#Chart3', mychart3);
-    vegaEmbed('#Chart4', mychart4);
-    vegaEmbed('#Chart5', mychart5)
-</script>
 
 </html>
+
+
