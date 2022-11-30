@@ -1,0 +1,40 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "IMF Lending Outstanding 1984 - 2022 ",
+      "subtitle":"Credit Outstanding for all members, SDRs (billions); Source: IMF",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/data_IMF_creditOutstanding_clean.csv"},
+  
+  "transform": [
+    {"calculate": "datum.Totals/1000000000", "as": "billions"}
+  ],
+
+  "height": 300,
+  "width": 500,
+
+  "mark": {
+    "type": "bar",
+    "color": "rgb(0,47,167"},
+
+"encoding": {
+     "x": {
+       "field": "date",
+       "type": "nominal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 90}},
+
+      "y": {
+        "field": "billions",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
