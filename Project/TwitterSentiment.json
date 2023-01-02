@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Project/BoroughSentiment.csv"
+    },
+    "title": {
+      "text": "London Borough Twitter Sentiment",
+      "subtitle": "Source: Twitter; Based on 1000 tweets for each borough",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "mark": {"type": "bar"},
+    "encoding": {
+      "x": {
+        "field": "name",
+        "type": "nominal",
+        "axis": {"grid": false},
+        "title": "Borough"
+      },
+      "y": {
+        "field": "percentage",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "title": "Sentiment (%)"
+      },
+      "color": {
+        "field": "sentiment",
+        "type": "nominal",
+        "scale": {
+          "domain": ["positive", "negative", "neutral"],
+          "range": ["green", "red", "rgb(220,220,220)"]
+        }
+      },
+      "tooltip": [
+        {"field": "sentiment", "type": "nominal"},
+        {"field": "percentage", "type": "quantitative"}
+      ]
+    },
+    "selection": {
+      "color_type": {
+        "type": "single",
+        "fields": ["sentiment"],
+        "bind": {
+          "input": "select",
+          "options": [null, "positive", "negative"],
+          "name": "Choose Property Type"
+        }
+      }
+    },
+    "transform": [
+      {
+        "filter": {
+          "selection": "color_type",
+          "oneOf": ["positive", "negative"]
+        }
+      }
+    ]
+  }
+  
