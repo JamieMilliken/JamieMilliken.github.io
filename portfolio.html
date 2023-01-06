@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+<header>
+    <div class="container">
+    <img src="twitter_header_photo_1.png" width="200" height="120" alt="logo" class="logo">
+  
+    <nav>
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='portfolio.html'>Portfolio</a></li>
+            <li><a href='project.html'>Project</a></li>
+            <li><a href='#'>Github</a></li>
+        </ul>
+    </nav>
+  </div>
+  
+  </header>
+  
+<!-- Portfolio Tasks -->
+
+
+<h3>(Week 1) Setting up web page, and embedding two charts.<h3>
+<container class="a_container">
+<p>UK Inflation<p>
+<p>The first chart tracks UK inflation using CPI.</p>
+<div class="chart" id="Chart1">
+<script>
+var myChart1 = "chartINF1.json";
+vegaEmbed('#Chart1', myChart1);
+</script>
+</div>
+</container> 
+<container class="a_container">
+<p>U.K Debt<p>
+<p>The second chart tracks UK debt as a percentage of GDP.</p>
+<div class="chart" id="Chart2"> 
+<script>
+var myChart2 = "chartPSF1.json";
+vegaEmbed('#Chart2', myChart2);
+</script>
+</div> 
+</container> 
+
+
+<h3>(Week 2) Two Charts: replicating one from the Financial Times, and your first original.<h3>
+<container class="a_container">
+<p>Original</p>
+<div class="chart" id="Chart3">
+<script>
+var myChart3 = "imflending.json";
+vegaEmbed('#Chart3', myChart3);
+</script>
+</div>
+</container> 
+<container class="a_container">
+<p>Adjusted</p>
+<div class="chart" id="Chart4">
+<script>
+var myChart4 = "AdjustedIMFLending.json"; 
+vegaEmbed('#Chart4', myChart4);
+</script>
+</div> 
+<p>When we adjust the original so that lending is a proportion of world GDP, 1985 appears to be the riskiest.</p>
+</container> 
+
+
+
+
+<h3>(Week 3) Two charts: inline data objects and visual encodings.<h3>
+<container class="a_container">
+<p>Visual Encoding 1: Indebtedness of the five largest western economies.</p>
+<p>Link to python notebook used for cleaning <a class="textlink" href="https://colab.research.google.com/drive/18WiDPvm-4iRRnujbJfykbRHNPnPaF-oQ#scrollTo=GLROp-7NdJB2">here</a></p>
+<div class="chart" id="Chart5">
+<script>
+var myChart5 = "DebtComparisonWK3.json";
+vegaEmbed('#Chart5', myChart5);
+</script>
+</div>
+</container> 
+<container class="a_container">
+<p>Visual Encoding 2: A tooltip is added to the first chart</p>
+<div class="chart" id="Chart6">
+<script>
+var myChart6 = "WK3Improved.json"; 
+vegaEmbed('#Chart6', myChart6);
+</script>
+</div> 
+<p>Using a “tooltip” allows the user to see exact values for a specific data point  and compare these values across countries and time. </p>
+</container> 
+
+
+<h3>(Week 4) One chart: Implement a data scraper of your own. Any source, any data.<h3>
+<container class="a_container1">
+<p>PGA Golf Top Driver's <p>
+<p>The data for this visual encoding has been scraped from the PGA website. Click to see the python notebook <a class="textlink" href="https://colab.research.google.com/drive/1Ptixu8v_V0ltcoRyiYNSPOscua2jnuDp">here</a>
+</p>
+<div class="chart2" id="Chart7">
+<script>
+var myChart7 = "PGA_Driving_Stats.json";
+vegaEmbed('#Chart7', myChart7);
+</script> 
+</div>
+<p>It is logical to scrape the PGA site as there is no obvious method of accesing the stats on the page. i.e API/CSV</p>
+</container> 
+ 
+
+<h3>(Week 5) Nine Charts: build a dashboard.<h3>
+    <div class="myWeek5">
+    <p> Trends in U.K Research and Development. <p>
+    <p> Click  <a class="textlink" href= "https://colab.research.google.com/drive/1n_7wZSbwsmYpyhvLSF99SMg7B8but4Cl" >here</a> for a link to the python notebook. 
+    </p>
+    <div class="grid-container" style = "display: grid;">
+    <div class="grid-item"><div class = dashchart id = "Chart8" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart9" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart10" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart11" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart12" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart13" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart14" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart15" style = "display: block;"></div></div>
+    <div class="grid-item"><div class = dashchart id = "Chart16" style = "display: block;"></div></div>    
+    </div> 
+</div> 
+    <div class="myWeek5">
+    <script>
+     //Define charts
+    var myChart8 = "A8EJ.json";
+    var myChart9 = "DLBX.json";
+    var myChart10 = "DLDB.json";
+    var myChart11 = "DLJU.json";
+    var myChart12 = "DLJV.json";
+    var myChart13 = "DLJW.json";
+    var myChart14 = "DLKI.json";
+    var myChart15 = "DLKL.json"; 
+    var myChart16 = "E4BM.json"; 
+    // Embed charts:
+    vegaEmbed('#Chart8', myChart8);
+    vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14);
+    vegaEmbed('#Chart15', myChart15);
+    vegaEmbed('#Chart16', myChart16);
+    </script> 
+    </div> 
+
+
+
+<h3>(Week 7) Two maps: a base map and a choropleth.<h3>
+<container class="a_container7">
+<p>Base Map <p>
+<p>This basemap shows the London boroughs.</p>
+<div class="chart" id="Chart17">
+<script>
+var myChart17 = "londonbasemap.json";
+vegaEmbed('#Chart17', myChart17);
+</script>
+</div>
+</container> 
+<container class="a_container7">
+<p>Chloropleth Map with tooltip<p>
+<p>This choloropleth map shows the average property price in each London borough.</p>
+<div class="chart" id="Chart18"> 
+<script>
+var myChart18 = "LondonHousePriceMap.json"; 
+vegaEmbed('#Chart18', myChart18);
+</script>
+</div> 
+<p>n.b This charts is used in my project, where further information can be found.</p>
+</container> 
+
+<h3>(Week 8) Festival of Economics<h3>
+    <container class="a_container">
+    <p>In one talk I attended at the festival of economics, the speakers proposed that market bubble’s have three key elements: marketability, speculation and cheap credit/money. </p>
+    <div class="chart" id="Chart19">
+    <script>
+    var myChart19 = "US10Yr.json";
+    vegaEmbed('#Chart19', myChart19);
+    </script>
+    </div>
+    </container> 
+    <container class="a_container">
+    <div class="chart" id="Chart20">
+    <script>
+    var myChart20 = "PE_NASDAQ.json"; 
+    vegaEmbed('#Chart20', myChart20);
+    </script>
+    </div> 
+    <p>These two charts support this argument. Looking at the dot-com bubble (1995-2000) we can see there was access to cheap money and large speculation.</p>
+    </container> 
+
+    <h3>(Week 9) Advanced Charts<h3>
+        <container class="a_container">
+            <p>Histogram</p>
+        <div class="chart" id="Chart21">
+            <img src="mlhist.png" width="600" height="500" alt="description_of_image_1">
+          </div>
+        </container> 
+        <container class="a_container">
+            <p>Correlation Heatmap</p>
+          <div class="chart" id="Chart22">
+            <img src="heatmap.png" width="600" height="500" alt="description_of_image_2">
+          </div>
+          <p>n.b These charts are used in my project, where a link to the python notebook can be found.</p>
+        </container> 
+
+    <h3>(Week 9) Advanced Charts<h3>
+            <container class="a_container">
+            <p>(1) Supervised Learning Task (Random Forest Regressor)</p>
+            <p>Data Hypothesis: A random forest regressor trained using geolocation and the number of bedrooms can accurately predict house prices.</p>
+            <p> Click  <a class="textlink" href= "https://colab.research.google.com/drive/1A-XA7C_GFmArW0gfgl4KD_4BRoKy9EMB?usp=sharing" >here</a> for a link to the python notebook.</p>
+            <p>Findings: The model’s results suggest house prices can be predicted with an accuracy of 71% when using geolocation and number of bedrooms.</p>
+            <p>(2) Unsupervised Learning: K-means Clustering</p>
+            <p>Data Hypothesis: A clustering algorithm can group houses based on their geolocation and number of bedrooms. </p>
+            <p> Click  <a class="textlink" href= "https://colab.research.google.com/drive/1Ez381dFUJqmREc6mlb02spo2K_SHmh1E" >here</a> for a link to the python notebook./p>
+            <p>Findings: The Clustering of houses by geolocation and number of bedrooms suggests that these features may be relevant to the houses’ characteristics. </p>
+            <div class="chart" id="Chart23">
+            <img src="longitudecluster.png" width="600" height="500" alt="description_of_image_1">
+            </div>
+            <p>n.b These algorithms use data from Rightmove and Google (2 Sources), they are used in my project where further information can be found.</p>
+            </container> 
+         
+              
+   

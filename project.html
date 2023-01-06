@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="project.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+<header>
+    <div class="container">
+    <img src="twitter_header_photo_1.png" width="200" height="120" alt="logo" class="logo">
+  
+    <nav>
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='portfolio.html'>Portfolio</a></li>
+            <li><a href='project.html'>Project</a></li>
+            <li><a href='#'>Github</a></li>
+        </ul>
+    </nav>
+  </div>
+  
+  </header>
+  
+<!-- Project Tasks -->
+<h1>Using Data Science to navigate the London Housing market.</h1>
+
+<h3>Aims</h3>
+<container class="container">
+<p>When starting this project, with only a term and a half left of university, my mind was cast forward to the future. Specifically, a graduate role in London. London is no doubt a vibrant city. Its housing market, however, an expensive labyrinth.
+    Could I use my newly acquired skills, on this data-science course, to help myself and others make informed decisions from a new perspective?</p>
+</container>
+<h3>Setting the Scene...<h3>
+    
+    <p>The following chart shows the rise in London House Prices using data from the Land registry. The data was put into "TIDY" form <a class="textlink" href="https://colab.research.google.com/drive/1mnnGQgrfnWQR20RocqJ3SCPqtmTtCJeW">here.</a><p>
+    <div class="chart" id="Chart1">
+    <script>
+    var myChart1 = "ProjectChart1.json";
+    vegaEmbed('#Chart1', myChart1);
+    </script>
+    </div>
+  
+    
+    <p>This chart shows the vast spatial variation in house prices across London.<p>
+    <div class="chart" id="Chart2">
+    <script>
+    var myChart2 = "LondonHousePriceMap.json";
+    vegaEmbed('#Chart2', myChart2);
+    </script>
+    </div>
+    <container class="container">
+    <p>To obtain recent data about average house prices in each postcode, I scraped and cleaned data from Ellis&co. estate agents using beautiful soup.
+    This required a loop as the data I was interested in was contained in multiple tables.
+    Link to the notebook <a class="textlink" href="https://colab.research.google.com/drive/1ugXw-t7AuIQ_Xe2X-mny3lBJP3ldsVUM#scrollTo=-2H5dnPTSRYV">here</a>.</p>
+    <container>
+    
+    <p>This chart contextualises Housing's importance. Housing is one of the largest outgoings for the average Household.<p>
+    <div class="chart" id="Chart3">
+        <script>
+        var myChart3 = "BudgetDonut.json";
+        vegaEmbed('#Chart3', myChart3);
+        </script>
+        </div>
+        <container>
+    
+
+<h3>Applying the Data-Science toolkit to find a great property</h3>
+<container class="container">
+<p>With housing being one of the main expenses to contend with, using data science to help someone find the right property was a natural progression. 
+My aim, to build a machine algorithm that could predict house prices.
+This could inform users of a house’s fair value.
+Consequently users, would pay fairer values for a property or even find undervalued “deals”!
+</p>
+</container>
+
+<container class="container">
+<p>To start this, I built a web scraper for Rightmove.
+This gave me a large dataset of live property prices with property features. Scraping by borough allowed me to acesss a geographically complete data-set. 
+The key issue was Rightmove showing a maximum of 42 pages, if . To overcome this I used an Index.
+<a class="textlink" href="https://colab.research.google.com/drive/174AXU05wkpltccL7xkMB2_CVtXfUFtvO" >Link</a> to python notebook. 
+I then cleaned the data <a class="textlink" href= "https://colab.research.google.com/drive/1bPU3opE3ORyTZm4dl3j384YnwvySLWlg" >here</a>. 
+The important part here, was extracting the information I was interested in from the property description e.g Postcode/No. bedrooms.
+As seen in the choropleth chart, London house prices vary greatly by location. 
+To make sure this was taken account for, I used the Google API to give each property in the dataset a geolocation. 
+<a class="textlink" href= "https://colab.research.google.com/drive/15xX3szKhBYjx5pkg3-wG9avVi6YkZdYG" >Link</a> to python notebook. </p>
+</container>
+
+<container class="container">
+<div class="chart" id="Chart4">
+  <img src="heatmap.png" width="500" height="400" alt="description_of_image_2">
+</div>
+<p>This chart shows a correlation heatmap of the features in the rightmove dataset. As expected there is a strong correlation between the no. of bedrooms and a property price. The seeming lack of correlation between longitude and latitude is explained by the charts below.
+<a class="textlink" href= "https://colab.research.google.com/drive/15xX3szKhBYjx5pkg3-wG9avVi6YkZdYG" >Link</a> to python notebook. </p>
+</container>
+
+
+
+    <div class="container">
+      <div class="chart">
+        <img src="longitudescatter.png" width="400" height="350" alt="description_of_image_2">
+      </div>
+      <div class="chart">
+        <img src="latitudescatter.png" width="400" height="350" alt="description_of_image_2">
+      </div>
+    <p>The scatter charts show why the correlations for longitude and latitude are so small.
+    House prices become more expensive towards the centre of London rather than in a single direction (non-linear relationship).</p>
+    </div>
+    
+
+
+<container class="container">
+<p>To build a predictive model for this data, I needed a machine learning algorithm.
+I choose to use a Random Forest Regressor as I believe it to be superior to other algorithms for this task due to its robustness to overfitting and ability to handle non-linear relationships.
+<a class="textlink" href= "https://colab.research.google.com/drive/1A-XA7C_GFmArW0gfgl4KD_4BRoKy9EMB" >Link</a> to python notebook. After standardising the model and tuning parameters the forest was 71% accurate in predicting house prices from my test data.  
+I then proceeded to use Clustering. The aim was to use it as a form of pre-processing for the random forest, however I found the groups uninstructive to create further features from. Notebook <a class="textlink" href= ="https://colab.research.google.com/drive/1A-XA7C_GFmArW0gfgl4KD_4BRoKy9EMB" >here</a> .
+</p>
+</container>
+
+<h3>Where to live?</h3>
+<container class="container">
+<p>London is a large city, the choice of where to live is an important one.
+To help find the best neighbourhoods I conducted sentiment analysis of twitter.
+This allowed me to find the boroughs talked of most positively and negatively as displayed in the chart below.
+<a class="textlink" href= "https://colab.research.google.com/drive/1A-XA7C_GFmArW0gfgl4KD_4BRoKy9EMB" >Link</a> to python the notebook where 
+I used the Twitter API to access the tweets for analysis.
+The key here, was scaling the code using a loop and then concatenating the dataframes to build a dataset for all London Boroughs.
+</p>
+</container>
+    
+    <div class="chart" id="Chart7">
+    <script>
+    var myChart7 = "TwitterSentiment.json"
+    vegaEmbed('#Chart7', myChart7);
+    </script>
+    </div>
+    
+    
+<h3>Conclusions</h3>
+<container class=container>
+<p>This project exhibits some of the vast potential Data-Science has in innovating the way we make decisions about where we live and the properties we choose.
+  Whilst the algorithm was 71% accurate and so not accurate enough for everyday use, it could easily be improved upon in future work.
+  Introducing more features, such as proximity to tube station or building a larger dataset using multiple listing companies, has the potential to quickly improve accuracy.
+  Ultimately there is potential to revolutionise the way properties are valued. 
+  he actionable nature of the Twitter Chart shows how helpful Data Science tools can be in assisting our decision-making process. 
+  Harnessing big data allows us to base crucial decisions beyond just “word of mouth”.</p>
+</container>
