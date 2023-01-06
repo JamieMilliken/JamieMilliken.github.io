@@ -10,7 +10,7 @@
     "width": 400,
     "height": 400,
     "data": {
-    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Project/london.json",
+    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/london.json",
     "format": { "property": "features" }
     },
     "projection": { "type": "mercator" },
@@ -19,7 +19,7 @@
     "lookup": "properties.Name",
     "from": {
     "data": {
-    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Project/Ellis%26co.csv"
+    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Ellis%26co.csv"
     },
     "key": "London Postcode",
     "fields": ["Average Property Price"]
