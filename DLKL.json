@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/portfolio/data_ONS-DLKL.json",
+    
+      "format": {"type": "json", "property": "years"}
+    },
+    "title": {
+      "text": "Intramural R&D - London",
+      "subtitle": "1993-2021, Source: ONS",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "width": 200,
+    "height": 180,
+    "mark": {"type": "line", "color": "rgb(178,34,34)"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {"grid": false},
+        "title": null
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "title": "£ million"
+      }
+    }
+  }

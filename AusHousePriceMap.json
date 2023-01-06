@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australia House Prices by State",
+    "subtitle": "Average House Price($ '000s) Source: OECD",
+    "anchor": "start",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10
+  },
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/portfolio/australiamap.json",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+
+"transform": [
+  {
+    "lookup": "properties.STATE_NAME",
+
+    "from":{
+      "data":{
+        "url":"https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/portfolio/AustraliaHousing.csv"},
+        "key":"Region",
+        "fields": ["Value"]
+
+      }
+    }
+],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "darkgrey",
+    "fxyzill": "lightgray",
+    "strokeWidth": 0.5},
+  "encoding":{
+    "color":{
+      "field":"Value",
+      "type": "quantitative" 
+    },
+    "tooltip":[
+      {"field":"Value", "type": "nominal", "title": "Average House Price"},
+      {"field":"properties.STATE_NAME", "type":"nominal", "title": "State"}]
+  }
+  }
