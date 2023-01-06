@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-    "text": "London House Prices",
+    "text": "London House Prices (£)",
     "subtitle": "Average House Prices by London Borough (2021)",
     "anchor": "start",
     "subtitleFontStyle": "italic",
@@ -40,7 +40,7 @@
     "tooltip":[
      {
     "field": "Average Property Price",
-    "type": "quantitative"
+    "type": "quantitative", "title": "Average Property Price (£)"
     },
     {"field": "properties.Name",
     "type": "nominal", "title": "Borough"}]
