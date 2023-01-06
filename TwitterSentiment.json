@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Project/BoroughSentiment.csv"
+      "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/BoroughSentiment.csv"
     },
     "title": {
       "text": "London Borough Twitter Sentiment",
