@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Project/Chart1data_final.csv"
+    "url": "https://raw.githubusercontent.com/JamieMilliken/JamieMilliken.github.io/main/Chart1data_final.csv"
   },
   "title": {
     "text": "London Property Prices",
