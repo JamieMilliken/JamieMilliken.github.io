@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple bar chart with embedded data.",
     "title": {
-      "text": "10 Year US Treasuary Yield",
+      "text": "10 Year US Treasuary Yield: An indicator of cheap credit/money",
       "subtitle": "Yield (%) Source: FRED",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
