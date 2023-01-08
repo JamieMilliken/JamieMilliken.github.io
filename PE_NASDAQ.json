@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple bar chart with embedded data.",
     "title": {
-      "text": "NASDAQ Shiller PE Ratio",
+      "text": "NASDAQ Shiller PE Ratio: An indicator of speculation",
       "subtitle": " Source: NASDAQ",
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
