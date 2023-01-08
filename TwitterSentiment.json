@@ -45,7 +45,7 @@
         "bind": {
           "input": "select",
           "options": [null, "positive", "negative"],
-          "name": "Choose Property Type"
+          "name": "Choose Sentiment Type"
         }
       }
     },
