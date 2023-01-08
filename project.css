@@ -136,7 +136,7 @@ font-size: medium;
 
 /* Set the apperance of the class, chart */
 .chart{
-background-color: null;
+background-color: white;
 display: flex;
 padding: 0.2em  !important;
 text-align: center; 
