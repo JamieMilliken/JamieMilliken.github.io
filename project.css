@@ -122,28 +122,24 @@ font-size: medium;
 }
 
 
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  text-align: left;
-  align-items: center;
-  padding: 0px 5px 0px 5px
+.chart { 
+  width: auto;
+  height: auto;
+  margin: 10px;
+  padding: 5px;
+  background-color: White;
+  border: #E0EAED solid 5px;
+  border-radius: 10px;
+  font-family: Inter,sans-serif;
+  font-size: 10pxp;
 }
 
 
 
 
-/* Set the apperance of the class, chart */
-.chart{
-background-color: null;
-display: flex;
-padding: 0.2em  !important;
-text-align: center; 
-border-width: .2em;
-height: 100%;
-width: 100%;
-margin: .2em;
-font-family: sans-serif;
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
