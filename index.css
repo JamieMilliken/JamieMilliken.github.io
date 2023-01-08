@@ -88,5 +88,13 @@ h3, h5{
   text-align: center;
 }  
 
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  padding: 0px 5px 0px 5px
+}
 
  
