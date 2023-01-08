@@ -157,6 +157,7 @@ width: 100%;
 display: inline-block !important;
 min-width: 280px;
 margin: .2em;
+font-family: sans-serif;
 }
 .a_chart{
   background-color: null;
